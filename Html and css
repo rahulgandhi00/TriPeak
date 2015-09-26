@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TriPeaks Card Game</title>
+	
+	<style>
+
+div#back_frame {
+    background-color: green;
+    width: 300px;
+	padding: 350px;
+    border: 25px solid black;
+    margin: 25px;
+}
+div#frontCardRow
+{
+	
+	border:#000 1px solid;
+	width:500px;
+	height: 90px;
+	position : absolute;
+	top: 60px;
+	left: 200px;
+}
+div#secondCardRow
+{
+	border:#000 1px solid;
+	width:600px;
+	height:90px;
+	position : absolute;
+	top: 160px;
+	left:160px;
+}
+div#thirdCardRow
+{
+	border:#000 1px solid;
+	width:700px;
+	height:90px;
+	position : absolute;
+	top: 260px;
+	left:120px;
+}
+div#fourthCardRow
+{
+	border:#000 1px solid;
+	width:800px;
+	height:90px;
+	position : absolute;
+	top: 360px;
+	left:80px;
+}
+
+
+
+div#back_card {
+	background:url(b2fv.gif) no-repeat;
+	border:#000 1px solid;
+	width:71px;
+	height:71px;
+	float:left;
+	margin:30px;
+	padding:20px;
+}
+
+</style>
+
+<script>
+	
+var deck = new Array();
+	
+var suitType = {Spades :'Spades', Hearts:'Hearts', Diamond:'Diamond', Clubs:'Clubs'};
+var ranks = {"Ace", "2", "3","4","5","6","7","8","9","10", "Jack", "Queen", "King"};
+var card_flipped = 0;	
+	
+function newCard(suit, rank)
+{	
+	this.rank = rank;
+	this.suit = suit;
+	
+	var output = " ";
+}
+	
+function createDeck	()
+{
+	for(var i = 1; i <= 4; i++)
+	{
+		for(j = 1; j <= ranks.length; j++)
+			{
+				deck = new newCard(suitType[i], ranks[j]) ;
+			}
+	}
+}
+			
+function shuffleCard(createDeck)
+{
+	var i; var j;
+	for(i = 0; i < deck.length; i++)
+	{
+		j = math.floor(Math.random() i * deck.length);
+		temp = deck[j];
+		deck[j] = deck[i];
+		deck[i] = temp;
+	}
+	
+}
+function newBoard()
+{
+	card_flipped = 0;
+	var output = "";
+	newCard.shuffleCard();
+	for(var i = 0; i < numberofCard.length; i++)
+	{
+		output += '<div id ="card_ +i+'" onclick ="cardflip(this,\''+newCard[i]+'\')"><div>';
+	}
+		document.getElementById('back_frame').innerHTML = output;
+}
+
+</script>
+
+</head>
+
+<body>
+
+	<div id = "back_frame"></div>
+	<div id = "frontCardRow"></div>
+	<div id = "secondCardRow"></div>
+	<div id = "thirdCardRow"></div>
+	<div id = "fourthCardRow"></div>
+	<div id = "back_card"></div>
+<script>newBoard();</script>
+</body>
+	
+	
+     </html>
