@@ -52,14 +52,7 @@ div#fourthCardRow
 
 
 
-div#back_card {
-	background:url(b2fv.gif) no-repeat;
-	border:#000 1px solid;
-	width:71px;
-	height:71px;
-	float:left;
-	margin:30px;
-	padding:20px;
+
 }
 
 </style>
@@ -126,7 +119,7 @@ function newBoard()
 	<div id = "secondCardRow"></div>
 	<div id = "thirdCardRow"></div>
 	<div id = "fourthCardRow"></div>
-	<div id = "back_card"></div>
+
 <script>newBoard();</script>
 </body>
 	
